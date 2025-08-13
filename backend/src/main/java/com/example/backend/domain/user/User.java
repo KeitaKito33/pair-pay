@@ -1,4 +1,4 @@
-package com.example.backend.domain.model;
+package com.example.backend.domain.user;
 
 public class User {
     private final String userId;

@@ -1,6 +1,5 @@
-package com.example.backend.domain.repository;
+package com.example.backend.domain.user;
 
-import com.example.backend.domain.model.User;
 import java.util.Optional;
 
 public interface UserRepository {
