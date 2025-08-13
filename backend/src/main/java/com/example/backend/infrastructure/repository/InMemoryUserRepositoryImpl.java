@@ -1,7 +1,8 @@
 package com.example.backend.infrastructure.repository;
 
-import com.example.backend.domain.model.User;
-import com.example.backend.domain.repository.UserRepository;
+import com.example.backend.domain.user.User;
+import com.example.backend.domain.user.UserRepository;
+
 import org.springframework.stereotype.Repository;
 import java.util.Map;
 import java.util.Optional;

@@ -31,3 +31,9 @@
 ■ゲッター
 カプセル化を行うため、privateで定義している。
 そこで、中身の値を知りたくなったときに、ゲッターを通して行われる
+
+■this.monthlyPayments = new ArrayList<>(monthlyPayments);
+・new ArrayList<>(): 新しい、空っぽのArrayList（リストの入れ物）を作成します。
+・...(monthlyPayments): その新しいArrayListを作る際に、コンストラクタの引数として外部から渡されてきたmonthlyPaymentsリストを渡します。
+・結果: ArrayListのこの機能により、渡されたリストの中身がすべてコピーされた、全く新しい別のリストが作成されます。
+この一行は、Userというクラスの**カプセル化（内部の状態を外部から守ること）**を徹底し、不変性を保つための、非常に重要な防御処理なのです。
