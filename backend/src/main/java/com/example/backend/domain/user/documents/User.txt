@@ -37,3 +37,9 @@
 ・...(monthlyPayments): その新しいArrayListを作る際に、コンストラクタの引数として外部から渡されてきたmonthlyPaymentsリストを渡します。
 ・結果: ArrayListのこの機能により、渡されたリストの中身がすべてコピーされた、全く新しい別のリストが作成されます。
 この一行は、Userというクラスの**カプセル化（内部の状態を外部から守ること）**を徹底し、不変性を保つための、非常に重要な防御処理なのです。
+
+■「1ユーザにつき、適用している月次負担額（MonthlyPayment）は1つまで」というビジネスルールの実装
+・.stream(): monthlyPaymentsリストの中の要素を、一つずつ流れるように処理するための準備をします。
+・.anyMatch(...): リストの中の要素が、指定した条件に一つでも一致（Match）するかどうかをチェックします。
+・payment -> payment.getStatus() == MonthlyPaymentStatus.APPLIED: 各payment（リストの中の各要素）のステータスがAPPLIEDかどうかを判定する条件です。
+・if (alreadyHasAppliedPayment): もしAPPLIEDの支払いが一つでも見つかった場合、throw new IllegalStateException(...)でエラーを発生させ、処理を即座に中断します。これにより、不正なデータが作られるのを防ぎます。

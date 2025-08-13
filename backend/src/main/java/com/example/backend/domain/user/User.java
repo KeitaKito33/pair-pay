@@ -9,7 +9,7 @@ import java.util.List;
 public class User {
     private final String userId;
     private final String userName;
-    private final List<MonthlyPayment> monthlyPayments;
+    private final List<MonthlyPayment> monthlyPayments; // ここに月次負担額を保持することで、ユーザを集約ルートとする
 
     public User(String userId, String userName, List<MonthlyPayment> monthlyPayments) {
         this.userId = userId;
