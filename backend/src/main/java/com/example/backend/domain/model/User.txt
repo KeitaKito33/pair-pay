@@ -1,0 +1,33 @@
+■finalはReactでいうconstで、変数の再代入は禁止だが、オブジェクトのプロパティは変更可能
+
+■コンストラクタ
+    public User(String userId, String userName) {
+        this.userId = userId;
+        this.userName = userName;
+    }
+
+こんな感じで、受け取る変数によって起動させるコンストラクタを準備できる。
+    // ① 新規登録用：まだIDが決まっていないユーザーを作るコンストラクタ
+    // 「名前だけ」を部品として受け取る
+    public User(String name) {
+        this.id = null; // IDはまだないのでnull(空)にしておく
+        this.name = name;
+    }
+
+    // ② DBから取得したデータ用：IDも名前も決まっているユーザーを作るコンストラクタ
+    // 「ID」と「名前」の両方を部品として受け取る
+    public User(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    // ③ フレームワーク用：空っぽのユーザーを作るコンストラクタ
+    // 部品は何も受け取らない
+    public User() {
+        this.id = null;
+        this.name = null;
+    }
+
+■ゲッター
+カプセル化を行うため、privateで定義している。
+そこで、中身の値を知りたくなったときに、ゲッターを通して行われる

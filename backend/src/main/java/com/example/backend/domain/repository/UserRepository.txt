@@ -1,0 +1,5 @@
+■Optional<User> findById(String userId);
+IDでユーザを検索するfindByIdメソッドの定義
+
+■void save(User user);
+user情報の更新ができる（2025/8/13時点では、userIdに紐づくuserNameを変更可能なビジネスルール）
