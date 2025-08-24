@@ -1,4 +1,4 @@
-package com.example.backend.domain.user;
+package com.example.backend.domain.models.user;
 
 import java.math.BigDecimal;
 import java.time.YearMonth;
@@ -40,8 +40,12 @@ public class User {
         this.monthlyPayments.add(newPayment);
     }
 
-    public String getUserId() { return userId; }
-    public String getUserName() { return userName; }
+    public String getUserId() {
+        return userId;
+    }
+    public String getUserName() {
+        return userName;
+    }
     public List<MonthlyPayment> getMonthlyPayments() {
         return Collections.unmodifiableList(monthlyPayments);
     }

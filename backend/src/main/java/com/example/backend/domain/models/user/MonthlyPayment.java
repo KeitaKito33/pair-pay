@@ -1,4 +1,4 @@
-package com.example.backend.domain.user;
+package com.example.backend.domain.models.user;
 
 import java.math.BigDecimal;
 import java.time.YearMonth;

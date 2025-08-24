@@ -1,7 +1,8 @@
 package com.example.backend.infrastructure.user;
 
-import com.example.backend.domain.user.User;
-import com.example.backend.domain.user.UserRepository;
+import com.example.backend.domain.models.user.User;
+import com.example.backend.domain.repository.UserRepository;
+
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
