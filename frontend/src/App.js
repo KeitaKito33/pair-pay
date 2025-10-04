@@ -1,14 +1,9 @@
 import React from 'react'
 import './App.css'
-import PaymentForm from './PaymentForm'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <PaymentForm />
-      </header>
-    </div>
+    <div></div>
   );
 }
 
