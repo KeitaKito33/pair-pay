@@ -20,6 +20,7 @@ public class Family {
 
     /**
      * --- ゲッター ---
+     * エンティティの属性に対して、外部からGETを許可
      */
     public String getFamilyId() {
         return familyId;

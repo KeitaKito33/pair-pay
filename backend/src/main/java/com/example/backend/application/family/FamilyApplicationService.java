@@ -32,7 +32,7 @@ public class FamilyApplicationService {
      * すべての家族情報を取得する
      */
     public List<Family> findAllFamilies() {
-        // リポジトリに処理を依頼し、結果をそのまま返す
+        // ドメイン層のリポジトリに処理を依頼し、結果をそのまま返す
         return familyRepository.findAll();
     }
 }
