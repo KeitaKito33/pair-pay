@@ -13,7 +13,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * InMemoryはDBを使用せず、メモリ上にデータを保存する（DBを使用するものは、「Jpa」を冒頭に付ける）
  * インターフェースはメソッドを定義するクラスの設計書のようなものであり、実際の処理は実装クラス（implements）で行う
  */
-@Repository // このクラスが永続化データ（DBに保存されるデータ）を扱う部品であることをSpringに知らせる
+@Repository // このクラスが永続化データ（DBに保存されるデータ）を扱う部品ですよ
 public class InMemoryFamilyRepository implements FamilyRepository {
 
     /**
